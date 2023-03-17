@@ -26,14 +26,14 @@ p {
   flex-wrap: wrap;
   width: 480px;
   letter-spacing: -5px;
-   font-weight: 900;
+  font-weight: 900;
 }
 .subtitle {
   top: 190px;
   left: 50px;
   font-size: 35px;
   height: 300px;
-   font-weight: 300;
+  font-weight: 300;
 }
 
 /* Add some content at the bottom of the video/page */
@@ -48,20 +48,24 @@ p {
 
 /* Style the button used to pause/play the video */
 .audioPlay {
-  width: 200px;
-  font-size: 18px;
   padding: 10px;
   border: none;
-  background: #000;
-  color: #fff;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   bottom: 10px;
   position: fixed;
+  background: transparent;
 }
 
-.audioPlay:hover {
-  background: #ddd;
-  color: black;
+.fa-play,
+.fa-pause {
+  position: fixed;
+  color: whitesmoke;
+  background: transparent;
+  bottom: 20px;
+  left: 40px;
+  font-size: 50px;
 }
 
 .Dropdown {
@@ -96,7 +100,29 @@ p {
   border-left: 5px solid black;
 }
 
-i {
+.fa-youtube {
+  margin: 15px;
+  letter-spacing: 2px;
+  color: white;
+  font-size: x-large;
+  font-style: bold;
+  font-weight: bolder;
+  border-style: none;
+  background-color: transparent;
+  font-size: xx-large;
+}
+.fa-heart {
+  margin: 15px;
+  letter-spacing: 2px;
+  color: white;
+  font-size: x-large;
+  font-style: bold;
+  font-weight: bolder;
+  border-style: none;
+  background-color: transparent;
+  font-size: xx-large;
+}
+.fa-film {
   margin: 15px;
   letter-spacing: 2px;
   color: white;
@@ -108,8 +134,131 @@ i {
   font-size: xx-large;
 }
 
-i:hover {
+.fa-youtube:hover {
   top: -1px;
   left: -1px;
   color: black;
+}
+
+.fa-heart:hover {
+  top: -1px;
+  left: -1px;
+  color: black;
+}
+.fa-film:hover {
+  top: -1px;
+  left: -1px;
+  color: black;
+}
+
+.FullItinerary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 30px;
+  bottom: 100px;
+  background: rgba(7, 7, 7, 0.449);
+  top: 10px;
+  margin: 0px;
+}
+
+a {
+  color: #111;
+}
+
+.photo {
+  margin: 40px;
+}
+
+.photo img {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  filter: grayscale(30%) contrast(120%);
+  box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: -10px;
+  border-radius: 15px;
+}
+
+.photo:hover img {
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.photo .glow {
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: 200%;
+  top: 0;
+  filter: blur(5px);
+}
+
+.photo:hover img,
+.photo:hover .glow-wrap {
+  margin-top: 0;
+}
+
+.dates {
+  color: white;
+  font-size: xx-large;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Ends */
+
+#author {
+  font-size: medium;
+  color: white;
+  text-decoration: none;
+}
+
+#author:hover {
+  color: #111;
+}
+
+.button-81 {
+  background-color: #0d172a;
+  border: 0 solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none white solid;
+  text-decoration-thickness: auto;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: fixed;
+  bottom: 70px;
+  right: 50px;
+}
+
+.button-81:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
 }
