@@ -6,7 +6,7 @@ console.log(itinerary);
 
   const handleDayChange = (day) => {
     setCurrentDay(day);
-    console.log(day);
+    console.log("handleDayChange:"+day);
   };
 
   return (

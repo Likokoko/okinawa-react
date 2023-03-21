@@ -1,8 +1,8 @@
 import { useState } from "react";
 import FullItinerary from "./Full-itinerary";
-import Expense from "../Expense";
-import Meals from "../Meals";
-import Activities from "../Activities";
+import Expense from "./Expense";
+import Meals from "./Meals";
+import Activities from "./Activities";
 
 const Dropdown = () => {
   const [isHovered, setIsHovered] = useState(false);
