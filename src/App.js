@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import VideoPage from "./videoPage";
+import itinerary from "./itinerary";
+
 
 function App() {
   return (

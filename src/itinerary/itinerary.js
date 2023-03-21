@@ -1,18 +1,41 @@
 const itinerary = {
   "Day 1 (6/2)": [
-    { time: "下午 1:00", place: "沖繩機場", desc: "租車" },
-    { time: "下午 2:00", place: "海洋博物館", desc: "參觀，活動時間約 2 小時" },
+    {
+      time: "中午 11:00",
+      place: "台北機場",
+      desc: "登機",
+      image: "peachCrew.webp",
+    },
+    {
+      time: "下午 1:00",
+      place: "沖繩機場",
+      desc: "租車",
+      image: "drive.jpeg",
+    },
+    {
+      time: "下午 2:00",
+      place: "海洋博物館",
+      desc: "參觀，活動時間約 2 小時",
+      image: "aqua.jpeg",
+    },
     {
       time: "晚上 5:00",
       place: "古宇利海洋塔",
       desc: "自由活動，預計活動時間約 1 小時",
+      image: "bridgeTower.jpg",
     },
     {
       time: "晚上 6:00",
       place: "古宇利大橋",
       desc: "觀看夕陽，預計活動時間約 1 小時",
+      image: "bridge.jpg",
     },
-    { time: "晚上 7:00", place: "飯店", desc: "入住，自由活動" },
+    {
+      time: "晚上 7:00",
+      place: "飯店",
+      desc: "入住，自由活動",
+      image: "stay.webp",
+    },
   ],
   "Day 2 (6/3)": [
     { time: "10:00 - 12:00", place: "又吉咖啡園", desc: "滑索體驗" },
@@ -54,4 +77,4 @@ const itinerary = {
   "6/7": [{ time: "08:00", place: "那霸機場", desc: "回台" }],
 };
 
-export default itinerary
+export default itinerary;

@@ -256,6 +256,72 @@ a {
   color: #fff;
 }
 
+.schedule {
+  background-image: url("https://images.unsplash.com/photo-1502038550463-387cbb8ea994");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.schedule__title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.schedule__day {
+  margin-bottom: 20px;
+}
+
+.schedule__day-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.schedule__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.schedule__item {
+  width: calc(31.33% - 10px);
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+.schedule__time {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.schedule__place {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.schedule__desc {
+  font-size: 14px;
+}
+
+
+.scheduleImg{
+  width:200px;
+  height:180px;
+}
+
 @media (min-width: 768px) {
   .button-81 {
     font-size: 1.125rem;
