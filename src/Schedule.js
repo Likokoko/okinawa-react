@@ -20,7 +20,7 @@ console.log(itinerary);
         </div>
         <ul className="schedule__list">
           {itinerary[currentDay].map((activity, index) => (
-            <li key={index} className="schedule__item">
+            <li key={index} className="schedule__item">//嘗試更改key為item.id,出現Cannot read properties of undefined (reading 'map')
               <img className="scheduleImg" src={activity.image} alt={"img here"}/>
               <div className="schedule__time">{activity.time}</div>
               <div className="schedule__place">{activity.place}</div>
