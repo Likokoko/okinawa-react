@@ -5,8 +5,9 @@ import Schedule from "./Schedule";
 const FullItinerary = () => {
   const [showSchedule, setShowSchedule] = useState(false);
   const [showFullItinerary, setShowFullItinerary] = useState(true);
-
-  const handleClick = () => {
+  const [currentDay, setCurrentDay] = useState("Day 1 (6/2)");
+  const handleClick = (value) => {
+    setCurrentDay(value)
     setShowSchedule(true);
     setShowFullItinerary(false);
   };
@@ -15,7 +16,7 @@ const FullItinerary = () => {
     <div className="FullItinerary">
       {showFullItinerary && (
         <>
-          <a href="#" className="photo" onClick={handleClick}>
+          <a href="#" className="photo" onClick={() => handleClick("Day 1 (6/2)")}>
             <h1 className="dates">Day 1</h1>
             <img src="aqua.jpeg" alt="bridge" />
 
@@ -28,7 +29,7 @@ const FullItinerary = () => {
             </a>
           </a>
 
-          <a href="#" className="photo" onClick={handleClick}>
+          <a href="#" className="photo" onClick={() => handleClick("Day 2 (6/3)")}>
             <h1 className="dates">Day 2</h1>
             <img src="dive.webp" alt="bridge" />
 
@@ -81,7 +82,7 @@ const FullItinerary = () => {
         </>
       )}
 
-      {showSchedule && <Schedule itinerary={itinerary}/>}
+      {showSchedule && <Schedule itinerary={itinerary} currentDay={currentDay} />}
 
       <a href="videoPage.js">
         <button className="button-81" role="button">
