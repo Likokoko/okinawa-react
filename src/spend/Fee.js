@@ -1,4 +1,4 @@
-const fee = {
+const Fee = {
   transportation: {
     機票來回: 36881,
     租車費用: 12400,
@@ -16,4 +16,4 @@ const fee = {
   },
 };
 
-export default fee;
+export default Fee;

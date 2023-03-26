@@ -1,12 +1,32 @@
-import { useState } from "react";
-import FullItinerary from "./Full-itinerary";
-import Expense from "./Expense";
+import { useState, useEffect } from "react";
+import FullItinerary from "./itinerary/Full-itinerary.js";
+
 import Meals from "./Meals";
 import Activities from "./Activities";
 
 const Dropdown = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [audioPlay, setAudioPlay] = useState(false);
+  const [scrollPos, setScrollPos] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrollPos(window.pageYOffset);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const navbarStyle = {
+    color: scrollPos < 600 ? "white" : "black",
+  };
+
+    const AudioStyle = {
+      color: scrollPos < 50 ? "white" : "black",
+    };
   function handleMouseEnter() {
     setIsHovered(true);
   }
@@ -25,6 +45,7 @@ const Dropdown = () => {
       setAudioPlay(false);
     }
   };
+
   return (
     <section className="Dropdown">
       <div className="DropUl">
@@ -32,19 +53,26 @@ const Dropdown = () => {
           className="Dropli"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          style={navbarStyle}
         >
           Full Itinerary
           {isHovered && <FullItinerary />}
         </button>
-        <button className="Dropli">Fee</button>
-        <button className="Dropli">Food</button>
-        <button className="Dropli">Fun</button>
-        <i class="fa-brands fa-youtube"></i>
-        <i class="fa-solid fa-heart"></i>
-        <i class="fa-solid fa-film"></i>
+        <button className="Dropli" style={navbarStyle}>
+          Fee
+        </button>
+        <button className="Dropli" style={navbarStyle}>
+          Food
+        </button>
+        <button className="Dropli" style={navbarStyle}>
+          Fun
+        </button>
+        <i class="fa-brands fa-youtube" style={navbarStyle}></i>
+        <i class="fa-solid fa-heart" style={navbarStyle}></i>
+        <i class="fa-solid fa-film" style={navbarStyle}></i>
       </div>
 
-      <button className="audioPlay" onClick={ToggleAudio}>
+      <button className="audioPlay" onClick={ToggleAudio} style={AudioStyle}>
         {audioPlay ? (
           <i class="fa-solid fa-pause"></i>
         ) : (

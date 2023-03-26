@@ -14,9 +14,7 @@ const Schedule = (props) => {
       <div className="schedule__day">
         <h3 className="schedule__day-title">{props.currentDay}</h3>
         <div className="schedule__day-selector">
-          {/* <button onClick={() => handleDayChange("Day 1 (6/2)")}>Day 1</button>
-          <button onClick={() => handleDayChange("Day 2 (6/3)")}>Day 2</button>
-          <button onClick={() => handleDayChange("Day 3 (6/4)")}>Day 3</button> */}
+
         </div>
         <ul className="schedule__list">
           {props.itinerary[props.currentDay]?.map((activity, index) => (

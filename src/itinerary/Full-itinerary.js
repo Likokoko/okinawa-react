@@ -1,13 +1,13 @@
 import { useState } from "react";
-import itinerary from "./itinerary";
-import Schedule from "./Schedule";
+import itinerary from '../itinerary/itinerary'
+import Schedule from "../itinerary/Schedule";
 
 const FullItinerary = () => {
   const [showSchedule, setShowSchedule] = useState(false);
   const [showFullItinerary, setShowFullItinerary] = useState(true);
   const [currentDay, setCurrentDay] = useState("Day 1 (6/2)");
   const handleClick = (value) => {
-    setCurrentDay(value)
+    setCurrentDay(value);
     setShowSchedule(true);
     setShowFullItinerary(false);
   };
@@ -16,7 +16,11 @@ const FullItinerary = () => {
     <div className="FullItinerary">
       {showFullItinerary && (
         <>
-          <a href="#" className="photo" onClick={() => handleClick("Day 1 (6/2)")}>
+          <a
+            href="#"
+            className="photo"
+            onClick={() => handleClick("Day 1 (6/2)")}
+          >
             <h1 className="dates">Day 1</h1>
             <img src="aqua.jpeg" alt="bridge" />
 
@@ -29,7 +33,11 @@ const FullItinerary = () => {
             </a>
           </a>
 
-          <a href="#" className="photo" onClick={() => handleClick("Day 2 (6/3)")}>
+          <a
+            href="#"
+            className="photo"
+            onClick={() => handleClick("Day 2 (6/3)")}
+          >
             <h1 className="dates">Day 2</h1>
             <img src="dive.webp" alt="bridge" />
 
@@ -42,7 +50,11 @@ const FullItinerary = () => {
             </a>
           </a>
 
-          <a href="#" className="photo" onClick={handleClick}>
+          <a
+            href="#"
+            className="photo"
+            onClick={() => handleClick("Day 3 (6/4)")}
+          >
             <h1 className="dates">Day 3</h1>
             <img src="cave.jpg" alt="bridge" />
 
@@ -55,7 +67,11 @@ const FullItinerary = () => {
             </a>
           </a>
 
-          <a href="#" className="photo" onClick={handleClick}>
+          <a
+            href="#"
+            className="photo"
+            onClick={() => handleClick("Day 4 (6/5)")}
+          >
             <h1 className="dates">Day 4</h1>
             <img src="mallInside.jpg" alt="bridge" />
 
@@ -68,7 +84,11 @@ const FullItinerary = () => {
             </a>
           </a>
 
-          <a href="#" className="photo" onClick={handleClick}>
+          <a
+            href="#"
+            className="photo"
+            onClick={() => handleClick("Day 5 (6/6)")}
+          >
             <h1 className="dates">Day 5</h1>
             <img src="street.jpg" alt="bridge" />
             <a
@@ -82,7 +102,9 @@ const FullItinerary = () => {
         </>
       )}
 
-      {showSchedule && <Schedule itinerary={itinerary} currentDay={currentDay} />}
+      {showSchedule && (
+        <Schedule itinerary={itinerary} currentDay={currentDay} />
+      )}
 
       <a href="videoPage.js">
         <button className="button-81" role="button">
