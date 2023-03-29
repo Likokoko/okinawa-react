@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import Fee from "./Fee";
 const Expense = () => {
   const [showExpense, setShowExpense] = useState(false);
@@ -12,16 +12,14 @@ const Expense = () => {
   const [accommodationEntries, setAccommodation] = useState(
     Object.entries(Fee.accommodation)
   );
-
   function handleHover() {
     setIsHovered(true);
-    console.log("hi")
   }
   function handleLeave() {
-     setIsHovered(false);
+    setIsHovered(false);
   }
   return (
-    <div className="expense">
+    <div className="expense" >
       <a href="#" className="expense-photo">
         <h1 className="include">Expense include</h1>
         <p className="desc">
@@ -40,14 +38,18 @@ const Expense = () => {
               muted
               autoPlay
               loop
-              onmouseenter={handleHover}
-              onmouseleave={handleLeave}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleLeave}
             />
-            {transportationEntries.map(([key, value]) => (
-              <h3 key={key} className="transportation">
-                {key} : {value}
-              </h3>
-            ))}
+
+            {isHovered &&
+              transportationEntries.map(([key, value]) => (
+                <h2 className="here">
+                  <h3 key={key} className="transportation">
+                    {key} : {value}
+                  </h3>
+                </h2>
+              ))}
           </h2>
           <h2 className="include-desc">
             <video
@@ -57,13 +59,16 @@ const Expense = () => {
               className="includeVid"
               src="beach-151054.mp4"
               alt="accommodation"
+              onMouseEnter={handleHover}
+              onMouseLeave={handleLeave}
             />
-            {accommodationEntries.map(([key, value]) => (
-              <h3 key={key} className="accommodation">
-                {" "}
-                {key} : {value}
-              </h3>
-            ))}
+            {isHovered &&
+              accommodationEntries.map(([key, value]) => (
+                <h3 key={key} className="accommodation">
+                  {" "}
+                  {key} : {value}
+                </h3>
+              ))}
           </h2>
           <h2 className="include-desc">
             <video
@@ -73,6 +78,8 @@ const Expense = () => {
               muted
               autoPlay
               loop
+              onMouseEnter={handleHover}
+              onMouseLeave={handleLeave}
             />
             {attractionEntries.map(([key, value]) => (
               <h3 key={key} className="attraction">

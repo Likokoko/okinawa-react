@@ -7,8 +7,8 @@ import Fee from "./spend/Fee";
 function App() {
   return (
     <div className="App">
-      <VideoPage />
-      <Expense />
+      <VideoPage/>
+      <Expense/>
     </div>
   );
 }

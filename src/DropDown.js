@@ -24,9 +24,9 @@ const Dropdown = () => {
     color: scrollPos < 600 ? "white" : "black",
   };
 
-    const AudioStyle = {
-      color: scrollPos < 50 ? "white" : "black",
-    };
+  const AudioStyle = {
+    color: scrollPos < 50 ? "white" : "black",
+  };
   function handleMouseEnter() {
     setIsHovered(true);
   }
@@ -45,6 +45,7 @@ const Dropdown = () => {
       setAudioPlay(false);
     }
   };
+
 
   return (
     <section className="Dropdown">
