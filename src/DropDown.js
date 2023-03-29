@@ -67,16 +67,16 @@ const Dropdown = () => {
         <button className="Dropli" style={navbarStyle}>
           Fun
         </button>
-        <i class="fa-brands fa-youtube" style={navbarStyle}></i>
-        <i class="fa-solid fa-heart" style={navbarStyle}></i>
-        <i class="fa-solid fa-film" style={navbarStyle}></i>
+        <i className="fa-brands fa-youtube" style={navbarStyle}></i>
+        <i className="fa-solid fa-heart" style={navbarStyle}></i>
+        <i className="fa-solid fa-film" style={navbarStyle}></i>
       </div>
 
       <button className="audioPlay" onClick={ToggleAudio} style={AudioStyle}>
         {audioPlay ? (
-          <i class="fa-solid fa-pause"></i>
+          <i className="fa-solid fa-pause"></i>
         ) : (
-          <i class="fa-solid fa-play"></i>
+          <i className="fa-solid fa-play"></i>
         )}
       </button>
     </section>

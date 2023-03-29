@@ -9,12 +9,6 @@ const Activities = () => {
           <i class="glow"></i>
         </div>
       </a>
-
-      <a href="https://visitokinawajapan.com/" target="_blank" id="author">
-        通往神之島的海中道路
-      </a>
-
-  
     </div>
   );
 };

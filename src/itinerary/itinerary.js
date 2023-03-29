@@ -15,25 +15,25 @@ const itinerary = {
     {
       time: "下午 2:00",
       place: "海洋博物館",
-      desc: "參觀，活動時間約 2 小時",
+      desc: "夢幻鯨鯊的超激景點",
       image: "aqua.jpeg",
     },
     {
       time: "晚上 5:00",
       place: "古宇利海洋塔",
-      desc: "自由活動，預計活動時間約 1 小時",
+      desc: "一望無際的白色鐘塔",
       image: "bridgeTower.jpg",
     },
     {
       time: "晚上 6:00",
       place: "古宇利大橋",
-      desc: "觀看夕陽，預計活動時間約 1 小時",
+      desc: "海中道路浪漫夕陽",
       image: "bridge.jpg",
     },
     {
       time: "晚上 7:00",
       place: "飯店",
-      desc: "入住，自由活動",
+      desc: "充電滿滿的特色住房",
       image: "stay.webp",
     },
   ],
@@ -85,31 +85,31 @@ const itinerary = {
     {
       time: "10:00 - 12:00",
       place: "琉球村",
-      desc: "逛琉球玻璃藝術品店等，預計活動時間約2小時",
+      desc: "琉球玻璃的藝術品店",
       image: "glassMaking.jpg",
     },
     {
       time: "12:00 - 13:00",
       place: "外人港巷",
-      desc: "享用午餐",
+      desc: "異國情調的拿手好菜",
       image: "foriegn.jpg",
     },
     {
       time: "13:30 - 15:30",
       place: "知念岬、玉泉洞",
-      desc: "鐘乳石",
+      desc: "鐘乳石洞裡竟然有咖啡廳",
       image: "caveCafe.webp",
     },
     {
       time: "16:00 - 17:30",
       place: "瀨長島",
-      desc: "晚餐",
+      desc: "小希臘浪漫海島一覽無遺",
       image: "greeceDay.webp",
     },
     {
       time: "17:30 - 20:00",
       place: "outlet",
-      desc: "兩個半小時逛好逛滿",
+      desc: "兩個半小時超便宜必敗",
       image: "malls.jpg",
     },
   ],
@@ -155,15 +155,33 @@ const itinerary = {
   "Day 5 (6/6)": [
     {
       time: "早上",
-      place: "沖繩電車",
-      desc: "小祿站/波上宮/百貨站",
+      place: "沖繩那霸市",
+      desc: "朱紅氣派的波上宮",
       image: "nahaCastle.jpg",
     },
     {
+      time: "早上",
+      place: "悠閒散步沖繩",
+      desc: "海灘上絕美神社",
+      image: "1526354585-948358194.jpg",
+    },
+    {
+      time: "中午",
+      place: "沖繩電車",
+      desc: "電車一日遊",
+      image: "mrt.jpg",
+    },
+    {
+      time: "午餐",
+      place: "市集必吃",
+      desc: "清香脆口的島苦瓜",
+      image: "IMG_2013.webp",
+    },
+    {
       time: "下午",
-      place: "飯店",
-      desc: "回飯店休息",
-      image: "stayWhite.webp",
+      place: "牧誌市場",
+      desc: "活躍熱鬧的海鮮市場",
+      image: "seafoodMarket.jpg",
     },
     {
       time: "晚上",
@@ -172,7 +190,6 @@ const itinerary = {
       image: "20181222-IMG_0003.webp",
     },
   ],
-
 };
 
 export default itinerary;

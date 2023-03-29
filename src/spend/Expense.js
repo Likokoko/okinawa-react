@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Fee from "./Fee";
 const Expense = () => {
-  const [showFullExpense, setShowFullExpense] = useState(true);
+  const [showExpense, setShowExpense] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [transportationEntries, setTransportationEntries] = useState(
     Object.entries(Fee.transportation)
   );
@@ -11,9 +12,17 @@ const Expense = () => {
   const [accommodationEntries, setAccommodation] = useState(
     Object.entries(Fee.accommodation)
   );
+
+  function handleHover() {
+    setIsHovered(true);
+    console.log("hi")
+  }
+  function handleLeave() {
+     setIsHovered(false);
+  }
   return (
     <div className="expense">
-      <a href="#" class="expense-photo">
+      <a href="#" className="expense-photo">
         <h1 className="include">Expense include</h1>
         <p className="desc">
           Experience the raw natural beauty and rich cultural heritage of
@@ -24,29 +33,55 @@ const Expense = () => {
         </p>
         <section className="include-type">
           <h2 className="include-desc">
-            <img src="peach.webp" alt="transportation" />
+            <video
+              className="includeVid"
+              src="thailand-30870.mp4"
+              alt="transportation"
+              muted
+              autoPlay
+              loop
+              onmouseenter={handleHover}
+              onmouseleave={handleLeave}
+            />
             {transportationEntries.map(([key, value]) => (
-              <h3 className="transportation">{key}</h3>
+              <h3 key={key} className="transportation">
+                {key} : {value}
+              </h3>
             ))}
           </h2>
           <h2 className="include-desc">
-            <img src="stay2.webp" alt="accommodation" />
+            <video
+              muted
+              autoPlay
+              loop
+              className="includeVid"
+              src="beach-151054.mp4"
+              alt="accommodation"
+            />
             {accommodationEntries.map(([key, value]) => (
-              <h3 className="accommodation">{key}</h3>
+              <h3 key={key} className="accommodation">
+                {" "}
+                {key} : {value}
+              </h3>
             ))}
           </h2>
           <h2 className="include-desc">
-            <img src="bigboat.jpg" alt="attractions" />
+            <video
+              className="includeVid"
+              src="scuba-diving-699.mp4"
+              alt="attractions"
+              muted
+              autoPlay
+              loop
+            />
             {attractionEntries.map(([key, value]) => (
-              <h3 className="attraction">{key}</h3>
+              <h3 key={key} className="attraction">
+                {" "}
+                {key} : {value}
+              </h3>
             ))}
           </h2>
         </section>
-        ;
-      </a>
-
-      <a href="https://visitokinawajapan.com/" target="_blank" id="author">
-        通往神之島的海中道路
       </a>
     </div>
   );

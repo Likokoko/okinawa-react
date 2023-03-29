@@ -14,6 +14,24 @@
   object-fit: cover;
   z-index: -1;
 }
+.includeVid {
+  width: 260px;
+  height: 280px;
+  object-fit: cover;
+  filter: grayscale(30%) contrast(120%);
+  box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: -10px;
+  border-radius: 15px;
+}
+.includeVid:hover {
+  box-shadow: 2px 2px 15px 0 red;
+}
+
+.hover{
+  box-shadow: 2px 2px 15px 0 green;
+}
 
 p {
   position: absolute;
@@ -67,7 +85,7 @@ p {
 .fa-pause {
   position: fixed;
   background: transparent;
-  bottom: 80px;
+  bottom: 20px;
   left: 40px;
   font-size: 50px;
 }
@@ -85,7 +103,7 @@ p {
   justify-content: end;
   position: fixed;
   right: 10px;
-  top:2px;
+  top: 2px;
 }
 
 .Dropli {
@@ -97,13 +115,8 @@ p {
   border-style: none;
   background-color: transparent;
 }
-
-.Dropli:hover {
-  color: black;
-  top: -1px;
-  left: -1px;
-  border-top: 5px solid black;
-  border-left: 5px solid black;
+.Dropli:hover{
+  color:grey;
 }
 
 .fa-youtube {
@@ -160,12 +173,11 @@ p {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 80%;
   position: fixed;
-  left: 30px;
-  bottom: 100px;
-  background: rgba(7, 7, 7, 0.449);
-  top: 10px;
+  left: 0px;
+  background: rgba(255, 255, 255, 0.801);
+  bottom: 90px;
   margin: 0px;
 }
 
@@ -208,7 +220,7 @@ a {
 }
 
 .dates {
-  color: white;
+  color: rgb(75, 74, 74);
   font-size: xx-large;
   font-style: italic;
   margin-bottom: 10px;
@@ -218,7 +230,7 @@ a {
 
 #author {
   font-size: medium;
-  color: white;
+  color: rgb(52, 52, 52);
   text-decoration: none;
 }
 
@@ -250,8 +262,8 @@ a {
   -webkit-user-select: none;
   touch-action: manipulation;
   position: fixed;
-  bottom: 70px;
-  right: 50px;
+  bottom: 100px;
+  right: 20px;
 }
 
 .button-81:hover {
@@ -269,20 +281,20 @@ a {
   flex-direction: column;
   align-items: center;
   color: white;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .schedule__title {
   font-size: 36px;
-  margin-bottom: 20px;
 }
 
-.schedule__day {
-  margin-bottom: 20px;
-}
 
 .schedule__day-title {
   font-size: 24px;
-  margin-bottom: 10px;
+  position: relative;
+  top:30px;
+  color:rgb(52, 51, 51);
 }
 
 .schedule__list {
@@ -291,11 +303,13 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position:relative;
+  bottom:30px;
 }
 
 .schedule__item {
-  width: calc(31.33% - 10px);
-  margin-bottom: 10px;
+  width: 25%;
+  margin: 10px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -318,8 +332,29 @@ a {
 }
 
 .scheduleImg {
-  width: 200px;
-  height: 180px;
+  width: 240px;
+  position: relative;
+  left: 45px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  z-index: 0;
+  height: 140px;
+}
+
+.leftRightIcon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+  position: relative;
+  top:250px;
+  margin:0px;
+  color:rgb(56, 56, 56);
+}
+.fa-circle-left,
+.fa-circle-right {
+  font-size: xxx-large;
 }
 
 .expense {
@@ -350,7 +385,7 @@ a {
 }
 .include-type {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   position: relative;
   top: 100px;
