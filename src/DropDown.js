@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import FullItinerary from "./itinerary/Full-itinerary.js";
 
 import Meals from "./Meals";
@@ -20,6 +20,7 @@ const Dropdown = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const navbarStyle = {
     color: scrollPos < 600 ? "white" : "black",
   };
@@ -46,7 +47,6 @@ const Dropdown = () => {
     }
   };
 
-
   return (
     <section className="Dropdown">
       <div className="DropUl">
@@ -59,7 +59,7 @@ const Dropdown = () => {
           Full Itinerary
           {isHovered && <FullItinerary />}
         </button>
-        <button className="Dropli" style={navbarStyle}>
+        <button className="Dropli" style={navbarStyle} >
           Fee
         </button>
         <button className="Dropli" style={navbarStyle}>
