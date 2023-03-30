@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Schedule = (props) => {
   const [currentPage, setCurrentPage] = useState(0);
-  
   function handleTurnPage() {
    console.log("hi")
   }
@@ -27,9 +26,10 @@ const Schedule = (props) => {
             <li key={index} className="schedule__item">
               <img
                 className="scheduleImg"
-                src={activity.image}
+                src={process.env.PUBLIC_URL + '/photo/' + activity.image}
                 alt={"img here"}
-              />
+              />{" "}
+              {console.log(activity.image)}
               <div className="schedule__time">{activity.time}</div>
               <div className="schedule__place">{activity.place}</div>
               <div className="schedule__desc">{activity.desc}</div>

@@ -1,10 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import FullItinerary from "./itinerary/Full-itinerary.js";
 
 import Meals from "./Meals";
 import Activities from "./Activities";
 
-const Dropdown = () => {
+const Dropdown = ({ handleDropDownClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [audioPlay, setAudioPlay] = useState(false);
   const [scrollPos, setScrollPos] = useState(0);
@@ -59,7 +59,11 @@ const Dropdown = () => {
           Full Itinerary
           {isHovered && <FullItinerary />}
         </button>
-        <button className="Dropli" style={navbarStyle} >
+        <button
+          className="Dropli Fee"
+          style={navbarStyle}
+          onClick={handleDropDownClick}
+        >
           Fee
         </button>
         <button className="Dropli" style={navbarStyle}>

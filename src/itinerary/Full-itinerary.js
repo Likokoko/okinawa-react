@@ -22,7 +22,7 @@ const FullItinerary = () => {
             onClick={() => handleClick("Day 1 (6/2)")}
           >
             <h1 className="dates">Day 1</h1>
-            <img src="aqua.jpeg" alt="bridge" />
+            <img src="./photo/aqua.jpeg" alt="bridge" />
 
             <a
               href="https://visitokinawajapan.com/"
@@ -39,7 +39,7 @@ const FullItinerary = () => {
             onClick={() => handleClick("Day 2 (6/3)")}
           >
             <h1 className="dates">Day 2</h1>
-            <img src="dive.webp" alt="bridge" />
+            <img src="./photo/dive.webp" alt="bridge" />
 
             <a
               href="https://visitokinawajapan.com/"
@@ -56,7 +56,7 @@ const FullItinerary = () => {
             onClick={() => handleClick("Day 3 (6/4)")}
           >
             <h1 className="dates">Day 3</h1>
-            <img src="cave.jpg" alt="bridge" />
+            <img src="./photo/cave.jpg" alt="bridge" />
 
             <a
               href="https://visitokinawajapan.com/"
@@ -73,7 +73,7 @@ const FullItinerary = () => {
             onClick={() => handleClick("Day 4 (6/5)")}
           >
             <h1 className="dates">Day 4</h1>
-            <img src="mallInside.jpg" alt="bridge" />
+            <img src="./photo/mallInside.jpg" alt="bridge" />
 
             <a
               href="https://visitokinawajapan.com/"
@@ -90,7 +90,7 @@ const FullItinerary = () => {
             onClick={() => handleClick("Day 5 (6/6)")}
           >
             <h1 className="dates">Day 5</h1>
-            <img src="street.jpg" alt="bridge" />
+            <img src="./photo/street.jpg" alt="bridge" />
             <a
               href="https://visitokinawajapan.com/"
               target="_blank"
@@ -106,7 +106,7 @@ const FullItinerary = () => {
         <Schedule itinerary={itinerary} currentDay={currentDay} />
       )}
 
-      <a href="videoPage.js">
+      <a href="./video/videoPage.js">
         <button className="button-81" role="button">
           回上一層
         </button>
