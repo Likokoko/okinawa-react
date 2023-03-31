@@ -25,17 +25,22 @@ const Schedule = (props) => {
           {props.itinerary[props.currentDay]?.map((activity, index) => (
             <li key={index} className="schedule__item">
               <img
-                className="scheduleImg"
-                src={process.env.PUBLIC_URL + '/photo/' + activity.image}
+                className="scheduleImg animate__animated animate__pulse animate__delay-4s animate__repeat-2"
+                src={process.env.PUBLIC_URL + "/photo/" + activity.image}
                 alt={"img here"}
               />{" "}
               {console.log(activity.image)}
-              <div className="schedule__time">{activity.time}</div>
+              <div className="schedule__time animate__animated animate__pulse">
+                {activity.time}
+              </div>
               <div className="schedule__place">{activity.place}</div>
               <div className="schedule__desc">{activity.desc}</div>
             </li>
           ))}
         </ul>
+        <button className="button-81" role="button" onClick={props.handleOff}>
+          回前頁
+        </button>
       </div>
     </div>
   );

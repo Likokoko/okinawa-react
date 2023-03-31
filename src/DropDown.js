@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import FullItinerary from "./itinerary/Full-itinerary.js";
-
-import Meals from "./Meals";
-import Activities from "./Activities";
 
 const Dropdown = ({ handleDropDownClick }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,21 +10,33 @@ const Dropdown = ({ handleDropDownClick }) => {
     function handleScroll() {
       setScrollPos(window.pageYOffset);
     }
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const navbarStyle = {
-    color: scrollPos < 600 ? "white" : "black",
+  const isMobile = scrollPos < 600;
+  const commonStyle = {
+    borderStyle: isMobile ? "none" : "outset",
+    borderColor: isMobile ? "none" : "lightgrey",
+    borderRadius: isMobile ? "0px" : "15px",
+    margin: isMobile ? "15px" : "5px",
   };
-
-  const AudioStyle = {
+  const navbarStyle = {
+    ...commonStyle,
+    color: isMobile ? "white" : "black",
+    margin: isMobile ? "15px" : "5px",
+  };
+  const iconStyle = {
+    ...commonStyle,
+    color: isMobile ? "white" : "black",
+    fontSize: isMobile ? "xx-large" : "x-large",
+  };
+  const audioStyle = {
     color: scrollPos < 50 ? "white" : "black",
   };
+
   function handleMouseEnter() {
     setIsHovered(true);
   }
@@ -35,7 +44,8 @@ const Dropdown = ({ handleDropDownClick }) => {
   function handleMouseLeave() {
     setIsHovered(false);
   }
-  const ToggleAudio = () => {
+
+  const toggleAudio = () => {
     const audio = document.getElementById("myAudio");
     if (audio.paused) {
       audio.play();
@@ -49,7 +59,14 @@ const Dropdown = ({ handleDropDownClick }) => {
 
   return (
     <section className="Dropdown">
-      <div className="DropUl">
+      <div
+        className="DropUl animate__animated animate__backInRight"
+        style={{
+          width: isMobile ? "95%" : "10%",
+          flexDirection: isMobile ? "row" : "column",
+          right: isMobile ? "10px" : "-1px",
+        }}
+      >
         <button
           className="Dropli"
           onMouseEnter={handleMouseEnter}
@@ -72,12 +89,23 @@ const Dropdown = ({ handleDropDownClick }) => {
         <button className="Dropli" style={navbarStyle}>
           Fun
         </button>
-        <i className="fa-brands fa-youtube" style={navbarStyle}></i>
-        <i className="fa-solid fa-heart" style={navbarStyle}></i>
-        <i className="fa-solid fa-film" style={navbarStyle}></i>
+        <a
+          href="https://www.youtube.com/watch?v=0chpzwXUewU"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa-brands fa-youtube" style={iconStyle}></i>
+        </a>
+        <i className="fa-solid fa-heart" style={iconStyle}></i>
+        <a
+          href="https://www.klook.com/zh-TW/car-rentals/city/12571-okinawa-car-rentals/?gclid=CjwKCAjw5pShBhB_EiwAvmnNVyh6PJD1tsJnKyQ8aIKospWl73-T6OzBCMvXFrnj99m_nEJFmMGORhoC-QcQAvD_BwE&gclsrc=aw.ds"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa-solid fa-film" style={iconStyle}></i>
+        </a>
       </div>
-
-      <button className="audioPlay" onClick={ToggleAudio} style={AudioStyle}>
+      <button className="audioPlay" onClick={toggleAudio} style={audioStyle}>
         {audioPlay ? (
           <i className="fa-solid fa-pause"></i>
         ) : (

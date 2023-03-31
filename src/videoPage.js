@@ -13,9 +13,12 @@ const VideoPage = () => {
       ></video>
       <audio loop id="myAudio" src="song.mp3" type="audio/mp3"></audio>
       <div className="content">
-        <p className="title">Visit Okinawa on June</p>
-        <p className="subtitle">get ready with your trip</p>
-       
+        <p className="title animate__animated animate__bounce">
+          Visit Okinawa on June
+        </p>
+        <p className="subtitle animate__animated animate__bounce">
+          get ready with your trip
+        </p>
       </div>
     </section>
   );

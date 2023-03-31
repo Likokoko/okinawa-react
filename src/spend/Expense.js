@@ -23,7 +23,7 @@ const Expense = () => {
     <div className="Expense">
       {/* ref={expenseRef} 如何帶入Expense component? 曾試過const Expense = forwardRef((props, ref) => {傳遞母層props但顯示component not function
 });*/}
-      <a href="#" className="expense-photo">
+      <a href="#" className="expense-photo ">
         <h1 className="include">Expense include</h1>
         <p className="desc">
           Experience the raw natural beauty and rich cultural heritage of

@@ -38,6 +38,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 0;
 }
 
 .title {
@@ -94,6 +95,8 @@ p {
   padding: 0px;
   width: 95%;
   margin: 20px;
+  position: absolute;
+  z-index: 1;
 }
 
 .DropUl {
@@ -102,14 +105,12 @@ p {
   text-align: center;
   justify-content: end;
   position: fixed;
-  right: 10px;
   top: 2px;
 }
 
 .Dropli {
   margin: 15px;
   letter-spacing: 2px;
-  font-size: x-large;
   font-style: bold;
   font-weight: bolder;
   border-style: none;
@@ -127,7 +128,6 @@ p {
   font-weight: bolder;
   border-style: none;
   background-color: transparent;
-  font-size: xx-large;
 }
 .fa-heart {
   margin: 15px;
@@ -137,7 +137,6 @@ p {
   font-weight: bolder;
   border-style: none;
   background-color: transparent;
-  font-size: xx-large;
 }
 .fa-film {
   margin: 15px;
@@ -147,7 +146,6 @@ p {
   font-weight: bolder;
   border-style: none;
   background-color: transparent;
-  font-size: xx-large;
 }
 
 .fa-youtube:hover {
@@ -172,13 +170,15 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 80%;
+  width: 120%;
   position: fixed;
-  left: 0px;
+  right: -115px;
   background: rgba(255, 255, 255, 0.801);
   bottom: 90px;
   margin: 0px;
+  z-index: 1;
+  top: 40px;
+  height: 650px;
 }
 
 a {
@@ -246,24 +246,22 @@ a {
   color: white;
   cursor: pointer;
   display: inline-block;
+  width: 10px;
   font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1.1rem;
+    "Helvetica Neue", Arial, "Noto Sans";
+  font-size: 12px;
   font-weight: 600;
   line-height: 1;
-  padding: 1rem 1.6rem;
   text-align: center;
   text-decoration: none white solid;
-  text-decoration-thickness: auto;
   transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   position: fixed;
-  bottom: 100px;
-  right: 20px;
+  bottom: 20px;
+  right: 130px;
 }
 
 .button-81:hover {
@@ -276,7 +274,7 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,7 +290,7 @@ a {
 .schedule__day-title {
   font-size: 24px;
   position: relative;
-  top: 30px;
+  bottom: 20px;
   color: rgb(52, 51, 51);
 }
 
@@ -307,7 +305,7 @@ a {
 }
 
 .schedule__item {
-  width: 25%;
+  width: 24%;
   margin: 10px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -333,7 +331,7 @@ a {
 .scheduleImg {
   width: 240px;
   position: relative;
-  left: 45px;
+  left: 60px;
   margin-top: 4px;
   margin-bottom: 2px;
   z-index: 0;
@@ -341,21 +339,24 @@ a {
 }
 
 .leftRightIcon {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 40px;
-  justify-content: space-between;
   position: relative;
-  top: 250px;
-  margin: 0px;
-  color: rgb(56, 56, 56);
 }
 .fa-circle-left,
 .fa-circle-right {
   font-size: xxx-large;
+  position: absolute;
+  top: 200px;
+  color: black;
+  z-index: 2;
 }
 
+.fa-circle-left {
+  left: 120px;
+}
+
+.fa-circle-right {
+  right: 120px;
+}
 .Expense {
   position: absolute;
   top: 850px;
@@ -375,6 +376,7 @@ a {
   margin: 40px 20px;
   width: 280px;
   text-align: center;
+  text-decoration: overline;
 }
 
 .desc {
@@ -453,7 +455,13 @@ h3 {
 
 .foodTitle {
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 60px;
+  text-decoration: overline;
+}
+.foodsub {
+  font-size: initial;
+  font-weight: 300;
+  width:45%;
 }
 
 .foods {
@@ -474,11 +482,24 @@ h3 {
 
 .foodBtnTitle {
   color: #304361;
- text-decoration: none;
+  text-decoration: none;
+}
+
+.foods {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.foodImg {
+  transition: transform 0.5s ease-in-out;
+}
+
+.foodImg:hover {
+  transform: scale(1.1);
 }
 @media (min-width: 768px) {
   .button-81 {
-    font-size: 1.125rem;
-    padding: 1rem 2rem;
+    font-size: 1rem;
+    padding: 1.3rem;
   }
 }

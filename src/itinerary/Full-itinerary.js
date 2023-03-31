@@ -12,8 +12,13 @@ const FullItinerary = () => {
     setShowFullItinerary(false);
   };
 
+  const handleOff = (value) => {
+    setShowSchedule(false);
+    setShowFullItinerary(true);
+  };
+
   return (
-    <div className="FullItinerary">
+    <div className="FullItinerary animate__animated animate__bounceIn">
       {showFullItinerary && (
         <>
           <a
@@ -103,14 +108,12 @@ const FullItinerary = () => {
       )}
 
       {showSchedule && (
-        <Schedule itinerary={itinerary} currentDay={currentDay} />
+        <Schedule
+          itinerary={itinerary}
+          currentDay={currentDay}
+          handleOff={handleOff}
+        />
       )}
-
-      <a href="./video/videoPage.js">
-        <button className="button-81" role="button">
-          回上一層
-        </button>
-      </a>
     </div>
   );
 };
