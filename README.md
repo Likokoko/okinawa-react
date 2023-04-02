@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# [Okinawa App](https://github.com/Likokoko/okinawa.git)
+ *  This is a travel-related React application that consists of several components, including Expense, Meals, Map, and Cards, which display information about expenses, meals, maps, and popular restaurants,
+  
+Skills Used
+1. React for building the user interface and creating reusable UI components
+2. useState and React Hooks for managing state within the component, including showSchedule, showFullItinerary, and currentDay
+3. useEffect for performing side effects such as loading external scripts and fetching data
+4. Loader from "@googlemaps/js-api-loader" for loading the Google Maps API
+5. Axios for making HTTP requests to fetch data
+6. Google Maps API for rendering the map, street view, and directions
+7. Asynchronous programming for fetching photos asynchronously using the fetchPhotos function
+8. Event handling for handling the click event on the map and each itinerary day
+9. Conditional rendering for showing different components based on the state of showRoute and conditionally rendering the showFullItinerary and showSchedule components based on the state
+10. JSX for writing HTML-like code within your JavaScript code
+11. Props for passing data from a parent component to a child component in React, including itinerary, currentDay, and handleOff props to the Schedule component
+12. Array.prototype.map() for looping over the businesses array and creating a new array of cards, and conditional rendering for checking if each business has an image URL and only rendering the card if it does
+13. CSS for styling the cards and the container and making the app responsive.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Future Improvements
+  	•	HTML structure:
+    * Ensure semantic tags are used appropriately for better accessibility and SEO.
+    • CSS design:
+    * Improve consistency in design elements such as font, color, and spacing.
+    • Functionality completeness:
+    * Add error handling and validation for user inputs to improve the robustness of the application.
