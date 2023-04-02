@@ -76,19 +76,6 @@ const Dropdown = ({ handleDropDownClick }) => {
           Full Itinerary
           {isHovered && <FullItinerary />}
         </button>
-        <button
-          className="Dropli Fee"
-          style={navbarStyle}
-          onClick={handleDropDownClick}
-        >
-          Fee
-        </button>
-        <button className="Dropli" style={navbarStyle}>
-          Food
-        </button>
-        <button className="Dropli" style={navbarStyle}>
-          Fun
-        </button>
         <a
           href="https://www.youtube.com/watch?v=0chpzwXUewU"
           target="_blank"
@@ -96,7 +83,7 @@ const Dropdown = ({ handleDropDownClick }) => {
         >
           <i className="fa-brands fa-youtube" style={iconStyle}></i>
         </a>
-        <i className="fa-solid fa-heart" style={iconStyle}></i>
+       
         <a
           href="https://www.klook.com/zh-TW/car-rentals/city/12571-okinawa-car-rentals/?gclid=CjwKCAjw5pShBhB_EiwAvmnNVyh6PJD1tsJnKyQ8aIKospWl73-T6OzBCMvXFrnj99m_nEJFmMGORhoC-QcQAvD_BwE&gclsrc=aw.ds"
           target="_blank"

@@ -10,17 +10,6 @@ const Schedule = (props) => {
       <div className="schedule__day">
         <h3 className="schedule__day-title">{props.currentDay}</h3>
         <div className="schedule__day-selector"></div>
-        <div className="leftRightIcon">
-          {" "}
-          <i
-            class="fa-regular fa-circle-left"
-            onClick={() => handleTurnPage()}
-          ></i>{" "}
-          <i
-            class="fa-regular fa-circle-right"
-            onClick={() => handleTurnPage()}
-          ></i>
-        </div>
         <ul className="schedule__list">
           {props.itinerary[props.currentDay]?.map((activity, index) => (
             <li key={index} className="schedule__item">

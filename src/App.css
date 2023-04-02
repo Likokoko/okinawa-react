@@ -338,25 +338,6 @@ a {
   height: 140px;
 }
 
-.leftRightIcon {
-  position: relative;
-}
-.fa-circle-left,
-.fa-circle-right {
-  font-size: xxx-large;
-  position: absolute;
-  top: 200px;
-  color: black;
-  z-index: 2;
-}
-
-.fa-circle-left {
-  left: 120px;
-}
-
-.fa-circle-right {
-  right: 120px;
-}
 .Expense {
   position: absolute;
   top: 850px;
@@ -461,7 +442,7 @@ h3 {
 .foodsub {
   font-size: initial;
   font-weight: 300;
-  width:45%;
+  width: 45%;
 }
 
 .foods {
@@ -496,6 +477,68 @@ h3 {
 
 .foodImg:hover {
   transform: scale(1.1);
+}
+
+.Map {
+  height: fit-content;
+  position: absolute;
+  overflow: hidden;
+  top: 2400px;
+  right: 100px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+}
+
+#map {
+  height: 600px;
+  width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mapTitle {
+  margin: 10px;
+}
+.mapBtn {
+  margin: 20px;
+  width: 100px;
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none white solid;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 2px rgba(39, 62, 111, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background-color: #49acaf85;
+  border-color: rgb(201, 201, 201);
+  color: white;
+}
+
+.card-container {
+  position: relative;
+  top: 2330px;
+  right: 100px;
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  width: 200px;
+  height: 200px;
+  margin:10px;
+}
+.cardImg {
+  width: 150px;
+  height: 150px;
 }
 @media (min-width: 768px) {
   .button-81 {
