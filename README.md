@@ -19,9 +19,6 @@ Skills Used
 
 
 # Future Improvements
- 	• HTML structure:
-    * Ensure semantic tags are used appropriately for better accessibility and SEO.
-  • CSS design:
-    * Improve consistency in design elements such as font, color, and spacing.
-  • Functionality completeness:
-    * Add error handling and validation for user inputs to improve the robustness of the application.
+1. HTML structure:Ensure semantic tags are used appropriately for better accessibility and SEO.
+2. CSS design:Improve consistency in design elements such as font, color, and spacing.
+3. Functionality completeness:Add error handling and validation for user inputs to improve the robustness of the application.
