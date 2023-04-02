@@ -1,7 +1,7 @@
 # [Okinawa App](https://github.com/Likokoko/okinawa-react.git)
  *  This is a travel-related React application that consists of several components, including Expense, Meals, Map, and Cards, which display information about expenses, meals, maps, and popular restaurants,
   
-Skills Used
+# Skills used
 1. React for building the user interface and creating reusable UI components
 2. useState and React Hooks for managing state within the component, including showSchedule, showFullItinerary, and currentDay
 3. useEffect for performing side effects such as loading external scripts and fetching data
