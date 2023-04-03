@@ -7,7 +7,7 @@ import Meals from "./Meals";
 import Map from "./map/Map";
 import { useState, useRef } from "react";
 import Dropdown from "./DropDown";
-import Cards from "./card";
+
 
 function App() {
   const expenseRef = useRef(null);
@@ -16,29 +16,7 @@ function App() {
     expenseRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const cards = [
-    {
-      id: 1,
-      description: "Restaurant 1",
-      image_url: "https://via.placeholder.com/150",
-      categories: [{ title: "Category 1" }],
-      rating: 4.5,
-    },
-    {
-      id: 2,
-      description: "Restaurant 2",
-      image_url: "https://via.placeholder.com/150",
-      categories: [{ title: "Category 2" }],
-      rating: 4,
-    },
-    {
-      id: 3,
-      name: "Restaurant 3",
-      image_url: "https://via.placeholder.com/150",
-      categories: [{ title: "Category 3" }],
-      rating: 3.5,
-    },
-  ];
+
 
   return (
     <div className="App">
@@ -47,7 +25,7 @@ function App() {
       <Expense ref={expenseRef} />
       <Meals />
       <Map />
-      <Cards businesses={cards} />
+      
     </div>
   );
 }

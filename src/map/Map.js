@@ -75,10 +75,9 @@ const Map = () => {
     <div className="Map">
       {showRoute ? (
         <div>
-          <h2 className="mapBtn">Show me the route</h2>
           <div id="map" style={{ height: "600px" }}></div>
-          <div>
-            <h3>Nearby Restaurants:</h3>
+          <div className="mapSmall">
+            <h3>Nearby spots:</h3>
             <ul>
               {businesses.map((business) => (
                 <li key={business.id}>{business.name}</li>
@@ -95,6 +94,7 @@ const Map = () => {
           </button>
         </div>
       )}
+   
     </div>
   );
 };

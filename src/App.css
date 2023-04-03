@@ -502,7 +502,15 @@ h3 {
   position: relative;
   overflow: hidden;
 }
-
+.mapSmall {
+  position: absolute;
+  overflow: hidden;
+  left: 830px;
+  bottom: 650px;
+  right: 0px;
+  width: 300px;
+  z-index: 4;
+}
 .mapTitle {
   margin: 10px;
 }
@@ -526,28 +534,7 @@ h3 {
   color: white;
 }
 
-.Cards {
-  position: relative;
-  top: 2480px;
-  left: 1120px;
-}
-.card-container {
-  position: relative;
-  top: 2330px;
-  right: 100px;
-  align-items: end;
-  display: flex;
-  flex-direction: column;
-}
-.card {
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-}
-.cardImg {
-  width: 150px;
-  height: 150px;
-}
+
 @media (min-width: 768px) {
   .button-81 {
     font-size: 1rem;
