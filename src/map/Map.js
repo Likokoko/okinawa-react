@@ -46,11 +46,6 @@ const Map = () => {
             directionsRenderer.setDirections(result);
           }
         });
-
-        // Fetch photos when map is clicked
-        google.maps.event.addListener(map, "click", () => {
-          fetchPhotos();
-        });
       }
     });
 
@@ -68,6 +63,8 @@ const Map = () => {
       });
       setBusinesses(response.data);
     };
+
+    fetchPhotos();
   }, [showRoute]);
 
   const handleShowRoute = () => {

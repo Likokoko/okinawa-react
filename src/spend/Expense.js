@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Fee from "./Fee";
 const Expense = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHoveredNew, setIsHoveredNew] = useState(null);
 
   const [transportationEntries, setTransportationEntries] = useState(
     Object.entries(Fee.transportation)
@@ -12,11 +12,13 @@ const Expense = () => {
   const [accommodationEntries, setAccommodation] = useState(
     Object.entries(Fee.accommodation)
   );
-  function handleHover() {
-    setIsHovered(true);
+  function handleHover(index) {
+    // setIsHovered(true);
+    setIsHoveredNew(index);
   }
   function handleLeave() {
-    setIsHovered(false);
+    // setIsHovered(false);
+    setIsHoveredNew(null);
   }
 
   return (
@@ -33,7 +35,11 @@ const Expense = () => {
           island, moment by moment.
         </p>
         <section className="include-type">
-          <h2 className="include-desc">
+          <h2
+            className="include-desc"
+            onMouseEnter={() => handleHover(1)}
+            onMouseLeave={handleLeave}
+          >
             <video
               className="includeVid"
               src="./video/thailand-30870.mp4"
@@ -41,10 +47,8 @@ const Expense = () => {
               muted
               autoPlay
               loop
-              onMouseEnter={handleHover}
-              onMouseLeave={handleLeave}
             />{" "}
-            {isHovered && (
+            {isHoveredNew === 1 && (
               <div className="feeItems">
                 {transportationEntries.map(([key, value]) => (
                   <h2 className="transportationFee">
@@ -61,7 +65,11 @@ const Expense = () => {
             )}
           </h2>
 
-          <h2 className="include-desc">
+          <h2
+            className="include-desc"
+            onMouseEnter={() => handleHover(2)}
+            onMouseLeave={handleLeave}
+          >
             <video
               muted
               autoPlay
@@ -69,11 +77,9 @@ const Expense = () => {
               className="includeVid"
               src="./video/beach-151054.mp4"
               alt="accommodation"
-              onMouseEnter={handleHover}
-              onMouseLeave={handleLeave}
             />
 
-            {isHovered && (
+            {isHoveredNew === 2 && (
               <div className="feeItems">
                 {accommodationEntries.map(([key, value]) => (
                   <h3
@@ -88,7 +94,11 @@ const Expense = () => {
               </div>
             )}
           </h2>
-          <h2 className="include-desc">
+          <h2
+            className="include-desc"
+            onMouseEnter={() => handleHover(3)}
+            onMouseLeave={handleLeave}
+          >
             <video
               className="includeVid"
               src="./video/scuba-diving-699.mp4"
@@ -96,11 +106,9 @@ const Expense = () => {
               muted
               autoPlay
               loop
-              onMouseEnter={handleHover}
-              onMouseLeave={handleLeave}
             />
 
-            {isHovered && (
+            {isHoveredNew === 3 && (
               <div className="feeItems">
                 {attractionEntries.map(([key, value]) => (
                   <h3

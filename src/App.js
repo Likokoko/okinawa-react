@@ -47,8 +47,7 @@ function App() {
       <Expense ref={expenseRef} />
       <Meals />
       <Map />
-      <h1>Popular Restaurants Near You</h1>
-      <Cards cards={cards} />
+      <Cards businesses={cards} />
     </div>
   );
 }

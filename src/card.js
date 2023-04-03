@@ -4,7 +4,11 @@ const Cards = ({ businesses }) => {
       {businesses.map((business) => {
         return business.image_url ? (
           <div key={business.id} className="Card">
-            <img src={business.image_url} alt={business.name} />
+            <img
+              className="cardImg"
+              src={business.image_url}
+              alt={business.name}
+            />
             <h3>{business.name}</h3>
           </div>
         ) : null;

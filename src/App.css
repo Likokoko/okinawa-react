@@ -360,6 +360,9 @@ a {
   text-decoration: overline;
 }
 
+.include-desc {
+  height: fit-content;
+}
 .desc {
   top: 110px;
   width: 80%;
@@ -523,6 +526,11 @@ h3 {
   color: white;
 }
 
+.Cards {
+  position: relative;
+  top: 2480px;
+  left: 1120px;
+}
 .card-container {
   position: relative;
   top: 2330px;
@@ -534,7 +542,7 @@ h3 {
 .card {
   width: 200px;
   height: 200px;
-  margin:10px;
+  margin: 10px;
 }
 .cardImg {
   width: 150px;
