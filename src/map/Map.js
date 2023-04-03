@@ -5,13 +5,14 @@ import axios from "axios";
 const Map = () => {
   const [showRoute, setShowRoute] = useState(false);
   const [businesses, setBusinesses] = useState([]);
+
   let google;
+  let panorama;
 
   useEffect(() => {
     const loader = new Loader({
       apiKey: "AIzaSyB4xI-KCixIdHfG82u0HngfbreUd02Ahbs",
       version: "weekly",
-      // Define additional options here, if needed
     });
 
     loader.load().then(() => {
@@ -23,52 +24,73 @@ const Map = () => {
       });
 
       if (showRoute) {
-        const panorama = new google.maps.StreetViewPanorama(
+        panorama = new google.maps.StreetViewPanorama(
           document.getElementById("map"),
           {
-            position: { lat: 26.2124014, lng: 127.6809324 },
             pov: { heading: 165, pitch: 0 },
             zoom: 1,
           }
         );
         map.setStreetView(panorama);
-
-        const directionsService = new google.maps.DirectionsService();
-        const directionsRenderer = new google.maps.DirectionsRenderer();
-        directionsRenderer.setMap(map);
-        const request = {
-          origin: "Naha Airport, Okinawa",
-          destination: "Cape Manzamo, Onna-son, Kunigami-gun, Okinawa",
-          travelMode: google.maps.TravelMode.DRIVING,
-        };
-        directionsService.route(request, (result, status) => {
-          if (status === "OK") {
-            directionsRenderer.setDirections(result);
-          }
+      } else {
+        map.addListener("click", (event) => {
+          const lat = event.latLng.lat();
+          const lng = event.latLng.lng();
+          const sv = new google.maps.StreetViewService();
+          sv.getPanorama(
+            { location: { lat, lng }, radius: 50 },
+            (data, status) => {
+              if (status === "OK") {
+                const panoOptions = {
+                  position: data.location.latLng,
+                  pov: { heading: 165, pitch: 0 },
+                  zoom: 1,
+                };
+                if (!panorama) {
+                  panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById("map"),
+                    panoOptions
+                  );
+                } else {
+                  panorama.setOptions(panoOptions);
+                }
+              }
+            }
+          );
         });
       }
     });
-
-    const fetchPhotos = async () => {
-      const response = await axios.get("https://api.unsplash.com/photos", {
-        params: {
-          query: "ocean",
-          per_page: 10,
-          orientation: "landscape",
-        },
-        headers: {
-          Authorization:
-            "Client-ID UzumzEF07w1ki3Ea6bkilNCPB0ag_Ubpn2ORamZe0Mc",
-        },
-      });
-      setBusinesses(response.data);
-    };
-
-    fetchPhotos();
   }, [showRoute]);
 
   const handleShowRoute = () => {
     setShowRoute(true);
+    axios
+      .get("https://api.example.com/businesses")
+      .then((response) => setBusinesses(response.data))
+      .catch((error) => console.log(error));
+       if (google) {
+        // console.log(
+        //   document.querySelector(
+        //     "mapsConsumerUiSceneInternalCoreScene__imageryRender"
+        //   )
+        // );dev tool 顯示null但 inspect 時是這個 element
+         panorama = new google.maps.StreetViewPanorama(
+           document.querySelector(
+             "mapsConsumerUiSceneInternalCoreScene__imageryRender"
+           ),
+           {
+             position: { lat: 26.2124014, lng: 127.6809324 },
+             pov: { heading: 165, pitch: 0 },
+             zoom: 1,
+             disableDefaultUI: true,
+             scrollwheel: false,
+             draggable: false,
+             keyboardShortcuts: false,
+             disableDoubleClickZoom: true,
+           }
+         );
+       }
+
   };
 
   return (
@@ -77,12 +99,7 @@ const Map = () => {
         <div>
           <div id="map" style={{ height: "600px" }}></div>
           <div className="mapSmall">
-            <h3>Nearby spots:</h3>
-            <ul>
-              {businesses.map((business) => (
-                <li key={business.id}>{business.name}</li>
-              ))}
-            </ul>
+       
           </div>
         </div>
       ) : (
@@ -90,11 +107,10 @@ const Map = () => {
           <h2 className="mapTitle">Where do you want to explore?</h2>
           <div id="map" style={{ height: "600px" }}></div>
           <button onClick={handleShowRoute} className="mapBtn">
-            Show me the route
+            take a real view now
           </button>
         </div>
       )}
-   
     </div>
   );
 };
