@@ -7,9 +7,6 @@
   display: flex;
   flex-direction: column;
 }
-.main {
-  position: relative;
-}
 #myVideo {
   position: absolute;
   top: 0;
@@ -17,20 +14,6 @@
   width: 100%;
   object-fit: cover;
   z-index: -1;
-}
-.includeVid {
-  width: 260px;
-  height: 280px;
-  object-fit: cover;
-  filter: grayscale(30%) contrast(120%);
-  box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
-  display: block;
-  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  margin-top: -10px;
-  border-radius: 15px;
-}
-.includeVid:hover {
-  box-shadow: 2px 2px 15px 0 rgb(3, 49, 51);
 }
 
 p {
@@ -42,19 +25,18 @@ p {
 }
 
 .title {
-  top: 170px;
+  top: 300%;
   color: #f1f1f1;
-  left: 40px;
-  font-size: 100px;
+  left: 8%;
+  font-size: 7rem;
   flex-wrap: wrap;
-  width: 480px;
-  letter-spacing: -5px;
   font-weight: 900;
+  width: 20%;
 }
 .subtitle {
   color: #f1f1f1;
-  top: 260px;
-  left: 50px;
+  top: 580%;
+  left: 2.5%;
   font-size: 35px;
   height: 300px;
   font-weight: 300;
@@ -377,6 +359,20 @@ a {
   font-size: 10px;
   height: 400px;
 }
+.includeVid {
+  width: 260px;
+  height: 280px;
+  object-fit: cover;
+  filter: grayscale(30%) contrast(120%);
+  box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: -10px;
+  border-radius: 15px;
+}
+.includeVid:hover {
+  box-shadow: 2px 2px 15px 0 rgb(3, 49, 51);
+}
 
 img {
   width: 260px;
@@ -517,7 +513,7 @@ h3 {
 .mapBtn {
   margin: 20px;
   position: relative;
-  right:20px;
+  right: 20px;
   width: 200px;
   height: 50px;
   font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto,
@@ -537,55 +533,110 @@ h3 {
   color: white;
 }
 
-@media (min-width: 768px) {
-  .button-81 {
-    font-size: 1rem;
-    padding: 1.3rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
+@media (max-width: 891px) and (max-height: 671px) {
   .title {
-    font-size: 60px;
-    top: 120px;
-    left: 20px;
-    width: 280px;
-    letter-spacing: -3px;
+    top: 10%;
+    left: 8%;
+    font-size: 2rem;
+    width: 20%;
   }
   .subtitle {
-    top: 200px;
-    left: 30px;
-    font-size: 25px;
-    height: 200px;
+    top: -41%;
+    left: 2.5%;
+    font-weight: 300;
+    font-size: 1.5rem;
   }
-  .includeVid {
-    width: 200px;
-    height: 220px;
-    margin: 20px;
+  .Expense {
+    top: 183px;
   }
-  .main {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
-@media only screen and (max-width: 480px) {
-  .title {
-    font-size: 40px;
+  .include {
+    font-size: 1.5rem;
+  }
+
+  .desc {
+    font-size: 0.75rem;
     top: 80px;
-    left: 10px;
-    width: 220px;
-    letter-spacing: -2px;
   }
-  .subtitle {
-    top: 140px;
-    left: 20px;
-    font-size: 20px;
-    height: 150px;
+  .include-type {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+    top: 100px;
+    font-size: 10px;
+    height: 400px;
   }
   .includeVid {
+    width: 100px;
+    height: 80px;
+  }
+  .includeVid:hover {
+    box-shadow: 2px 2px 15px 0 rgb(3, 49, 51);
+  }
+  .Dropli {
+    font-size: 9px;
+  }
+
+  img {
     width: 160px;
     height: 180px;
-    margin: 10px;
+  }
+  .feeItems {
+    position: relative;
+    top: 20px;
+    right: 10px;
+    width: 100px;
+  }
+  .feeItem {
+    font-size: 10px;
+  }
+  .meals {
+    top: 300px;
+  }
+
+  .foodsub {
+    font-size: small;
+    width: 75%;
+  }
+  .foodImg {
+    width: 65px;
+    height: 65px;
+  }
+  .foodBtn {
+    width: 100px;
+    height: 20px;
+  }
+
+  .foodBtnTitle {
+    font-size: 0.6rem;
+    bottom: 13px;
+    position: relative;
+  }
+  .Map {
+    top: 350px;
+  }
+  .mapTitle {
+    font-size: 1rem;
+  }
+  #map {
+    width: 300px;
+    left: 0px;
+  }
+  .mapBtn {
+    width: 100px;
+    height: 30px;
+  }
+  .mapSmall {
+    position: relative;
+    overflow: hidden;
+    top: 10px;
+    left: 0px;
+    width: 300px;
+    height: 200px;
+  }
+  .fa-play,
+  .fa-pause {
+    font-size: small;
   }
 }

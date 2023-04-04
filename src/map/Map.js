@@ -97,7 +97,7 @@ const Map = () => {
     <div className="Map">
       {showRoute ? (
         <div>
-          <div id="map" style={{ height: "600px" }}></div>
+          <div id="map"></div>
           <div className="mapSmall">
        
           </div>
