@@ -1,4 +1,4 @@
-# [Okinawa App](https://github.com/Likokoko/okinawa-react.git)
+# [Okinawa App](https://okinawa-react.vercel.app/)
  *  This is a travel-related React application that consists of several components, including Expense, Meals, Map, and Cards, which display information about expenses, meals, maps, and popular restaurants,
   
 # Skills used
